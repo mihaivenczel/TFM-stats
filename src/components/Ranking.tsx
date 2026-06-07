@@ -20,33 +20,33 @@ const players = [
     id: "1",
     name: "Brusti",
     wins: 3,
-    losses: 2,
+    losses: 3,
     muisme: 2,
-    matches: 5,
+    matches: 6,
   },
   {
     id: "2",
     name: "Rares",
     wins: 1,
-    losses: 4,
+    losses: 5,
     muisme: 4,
-    matches: 5,
+    matches: 6,
   },
   {
     id: "3",
     name: "Marcel",
     wins: 0,
-    losses: 0,
+    losses: 1,
     muisme: 0,
-    matches: 0,
+    matches: 1,
   },
   {
     id: "4",
     name: "Gabi",
-    wins: 1,
+    wins: 2,
     losses: 3,
     muisme: 1,
-    matches: 4,
+    matches: 5,
   },
   {
     id: "5",
@@ -59,10 +59,10 @@ const players = [
   {
     id: "6",
     name: "Mihai",
-    wins: 0,
+    wins: 1,
     losses: 5,
-    muisme: 2,
-    matches: 5,
+    muisme: 4,
+    matches: 6,
   },
   {
     id: "7",
@@ -72,9 +72,17 @@ const players = [
     muisme: 0,
     matches: 1,
   },
-    {
+  {
     id: "7",
     name: "Raul",
+    wins: 0,
+    losses: 1,
+    muisme: 0,
+    matches: 1,
+  },
+  {
+    id: "8",
+    name: "Amalia",
     wins: 0,
     losses: 1,
     muisme: 0,
@@ -96,25 +104,21 @@ export default function Rankings() {
     },
     {
       title: "Win ratio",
-
       value: winRatio,
       renderValue: (v) => `${(v * 100).toFixed(1)}%`,
     },
     {
       title: "Loss ratio",
-
       value: lossRatio,
       renderValue: (v) => `${(v * 100).toFixed(1)}%`,
     },
     {
       title: "Muist ranking",
-
       value: (p) => p.muisme,
       renderValue: (v) => ` ${v}`,
     },
     {
       title: "Muism rate / match",
-
       value: muismRate,
       renderValue: (v) => v.toFixed(2),
     },
